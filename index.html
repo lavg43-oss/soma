@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SOMA | Portafolio Institucional</title>
+    <meta name="description" content="Ayudamos a escuelas y empresas a proyectar una imagen institucional sólida mediante diseño, impresión y personalización.">
+    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="navbar">
+        <div class="logo">
+            <span>S</span><span>O</span><span>M</span><span>A</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#inicio">INICIO</a></li>
+                <li><a href="#identidad">NOSOTROS</a></li>
+                <li><a href="#portafolio">PORTAFOLIO</a></li>
+                <li><a href="#contacto" class="btn-primary">COTIZAR AHORA</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero">
+        <h1>PORTAFOLIO DE PRODUCTOS</h1>
+        <h2>MÁS QUE IMPRIMIR, CONSTRUIMOS IDENTIDAD</h2>
+        <a href="#contacto" class="btn-primary">Inicia tu proyecto</a>
+        
+        <div class="mantra">
+            "Si no te ven, <span>no te compran</span>"
+        </div>
+    </section>
+
+    <!-- Nosotros Section -->
+    <section id="identidad" class="identidad">
+        <div class="identidad-grid">
+            <div class="identidad-card">
+                <h3>HISTORIA</h3>
+                <p>Nacimos con una idea muy sencilla: ayudar a que cada institución proyecte la calidad del trabajo que realiza. Durante años hemos colaborado con escuelas y empresas desarrollando materiales que van desde agendas hasta imagen corporativa.</p>
+            </div>
+            <div class="identidad-card">
+                <h3>MISIÓN</h3>
+                <p>Ayudar a escuelas y empresas a fortalecer su imagen institucional mediante soluciones gráficas y productos personalizados de alta calidad, con atención cercana, cumplimiento y diseño profesional.</p>
+            </div>
+            <div class="identidad-card">
+                <h3>VISIÓN</h3>
+                <p>Convertirnos en el aliado de confianza para instituciones educativas y empresas que buscan proyectar una imagen profesional y consistente en cada detalle.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portafolio Section -->
+    <section id="portafolio" class="portafolio">
+        <h2 class="section-title">NUESTRAS SOLUCIONES</h2>
+        <div class="portafolio-grid" id="productos-container">
+            <!-- Productos cargados desde Javascript -->
+        </div>
+    </section>
+
+    <!-- Contacto Section -->
+    <section id="contacto" class="contacto">
+        <div class="contacto-container">
+            <div class="contacto-info">
+                <h3>COTIZACIÓN INMEDIATA</h3>
+                <p>Eduardo Solís Durán</p>
+                <div class="phone">81 81 123 153</div>
+                <a href="https://wa.me/528181123153" target="_blank" class="btn-whatsapp">CHAT DIRECTO EN WHATSAPP</a>
+            </div>
+            
+            <form id="contactForm" class="contact-form">
+                <input type="text" id="nombre" name="nombre" placeholder="TU NOMBRE O EMPRESA" required>
+                <input type="tel" id="telefono" name="telefono" placeholder="TELÉFONO" required>
+                <input type="email" id="email" name="email" placeholder="CORREO ELECTRÓNICO (Opcional)">
+                <textarea id="mensaje" name="mensaje" placeholder="¿QUÉ TIPO DE SOLUCIÓN NECESITAS?" required></textarea>
+                <button type="submit" class="btn-primary" style="width: 100%;">ENVIAR SOLICITUD</button>
+                <div id="formStatus" style="margin-top: 1rem; font-weight: 700; color: var(--soma-cyan);"></div>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 SOMA PUBLICIDAD. TODOS LOS DERECHOS RESERVADOS.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
