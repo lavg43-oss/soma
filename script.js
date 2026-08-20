@@ -94,31 +94,32 @@ document.addEventListener('DOMContentLoaded', () => {
         // Por ahora, simularemos el éxito
         
         const formData = new FormData(form);
-        const data = Object.fromEntries(formData.entries());
 
-        statusDiv.style.color = 'var(--accent-secondary)';
+        statusDiv.style.color = 'var(--soma-cyan)';
         statusDiv.textContent = 'Enviando solicitud...';
 
-        // Fake network request
-        setTimeout(() => {
-            console.log('Datos listos para enviar a Google Sheets:', data);
+        // REEMPLAZA ESTA URL CON LA QUE TE DE GOOGLE APPS SCRIPT
+        const GOOGLE_SCRIPT_URL = "PEGAR_AQUI_LA_URL_DE_GOOGLE";
+
+        if (GOOGLE_SCRIPT_URL === "PEGAR_AQUI_LA_URL_DE_GOOGLE") {
+            statusDiv.style.color = '#ffde00';
+            statusDiv.textContent = 'Falta configurar la URL de Google Sheets en script.js';
+            return;
+        }
+
+        fetch(GOOGLE_SCRIPT_URL, {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => {
             statusDiv.style.color = '#25D366';
             statusDiv.textContent = '¡Gracias! Tu solicitud ha sido enviada. Te contactaremos pronto.';
             form.reset();
-        }, 1500);
-
-        /* 
-        EJEMPLO DE IMPLEMENTACIÓN REAL (Una vez que crees el Google Apps Script):
-        
-        fetch('URL_DEL_WEBHOOK_DE_GOOGLE_APPS_SCRIPT', {
-            method: 'POST',
-            mode: 'no-cors',
-            body: formData
-        }).then(() => {
-            statusDiv.textContent = '¡Gracias! Solicitud enviada.';
-        }).catch(err => {
-            statusDiv.textContent = 'Hubo un error. Por favor intenta por WhatsApp.';
+        })
+        .catch(err => {
+            console.error('Error:', err);
+            statusDiv.style.color = 'var(--soma-magenta)';
+            statusDiv.textContent = 'Hubo un error. Por favor intenta contactarnos por WhatsApp.';
         });
-        */
     });
 });
