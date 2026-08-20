@@ -94,6 +94,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // Por ahora, simularemos el éxito
         
         const formData = new FormData(form);
+        const urlEncodedData = new URLSearchParams(formData).toString();
 
         statusDiv.style.color = 'var(--soma-cyan)';
         statusDiv.textContent = 'Enviando solicitud...';
@@ -110,7 +111,10 @@ document.addEventListener('DOMContentLoaded', () => {
         fetch(GOOGLE_SCRIPT_URL, {
             method: 'POST',
             mode: 'no-cors',
-            body: formData
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded'
+            },
+            body: urlEncodedData
         })
         .then(response => {
             statusDiv.style.color = '#25D366';
