@@ -98,8 +98,8 @@ document.addEventListener('DOMContentLoaded', () => {
         statusDiv.style.color = 'var(--soma-cyan)';
         statusDiv.textContent = 'Enviando solicitud...';
 
-        // REEMPLAZA ESTA URL CON LA QUE TE DE GOOGLE APPS SCRIPT
-        const GOOGLE_SCRIPT_URL = "PEGAR_AQUI_LA_URL_DE_GOOGLE";
+        // URL de tu Google Apps Script (Webhook)
+        const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzR-vW7EPwUGsCWkahsCCY61itfZv670V6d1A2G7XfPRbXLWrVTN_4Fk4FjmLcIQLqx/exec";
 
         if (GOOGLE_SCRIPT_URL === "PEGAR_AQUI_LA_URL_DE_GOOGLE") {
             statusDiv.style.color = '#ffde00';
