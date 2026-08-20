@@ -63,7 +63,7 @@ h1, h2, h3 {
 }
 
 .logo img {
-    height: 45px;
+    height: 75px;
     width: auto;
     object-fit: contain;
 }
